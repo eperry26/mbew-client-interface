@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+div.container {
+    position: relative;
+    outline: auto;
+    outline-style: solid;
+    font-size: larger;
+    padding-bottom: 3%;
+}
+
+.graph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.profile{
+    float: left;
+    position:absolute;
+    z-index: 300;
+    right:0;
+    top:0;
+}
+
+.menu{
+    float: right;
+    position:absolute;
+    z-index: 300;
+    left:0;
+    top:0;
+}
