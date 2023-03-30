@@ -1,27 +1,23 @@
-<h2>Tremor Graph</h2>
-<div *ngIf="graphChoice=='Line'" style="display: block;">
-    <canvas baseChart width="300" height="200"
-      [type]="'line'"
-      [data]="lineChartData"
-      [options]="lineChartOptions"
-      [legend]="lineChartLegend">
-    </canvas>
-  </div>
 
-  <div *ngIf="graphChoice=='Bar'" style="display: block;">
-    <canvas baseChart width="300" height="200"
-      [type]="'bar'"
-      [data]="barChartData"
-      [options]="barChartOptions"
-    >
-    </canvas>
-  </div>
 
-  <div style="margin: 5%;">
-    <mat-form-field appearance="fill">
-      <mat-label>Graph Type</mat-label>
-      <mat-select (selectionChange)="onChange($event)" >
-        <mat-option *ngFor="let graph of graphOptions" [value]="graph">{{graph}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+  <canvas baseChart id="myChart" width="400" height="400" (click)="clickHandler($event)" >{{chart}}</canvas>
+
+
+<!-- <div *ngIf="graphChoice=='Bar'" style="display: block;">
+  <canvas baseChart width="500" height="300">
+  </canvas>
+</div> -->
+
+<!-- <div style="margin: 5%;">
+  <mat-form-field appearance="fill">
+    <mat-label>Graph Type</mat-label>
+    <mat-select (selectionChange)="onChange($event)">
+      <mat-option *ngFor="let graph of graphChoices" [value]="graph">{{graph}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div> -->
+
+<!-- <div class="chart-container">
+    <canvas baseChart id="MyChart" width="700" height="500"
+    >{{chart}}</canvas>
+  </div> -->

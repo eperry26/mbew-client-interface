@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-  menuChange(x: any) {
-    x.classList.toggle("change");
-  }
+
 
 }

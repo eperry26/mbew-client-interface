@@ -1,6 +1,5 @@
 <h1>M-BEW Interface</h1>
 <div class="container">
-    <app-tremor-graph class="graph"></app-tremor-graph>
-    <app-menu class="menu"></app-menu>
-    <app-physician-profile class="profile"></app-physician-profile>
+        <app-tremor-graph class="graph" (childEvent)="position=$event"></app-tremor-graph>
+        <app-bar-graph class="graph2" [lineData]="position"></app-bar-graph>
 </div>
