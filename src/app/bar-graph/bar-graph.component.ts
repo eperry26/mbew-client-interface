@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import Chart from 'chart.js/auto'
+import 'chartjs-adapter-date-fns';
 import * as data1 from '../../assets/data/data1.json';
 import * as data2 from '../../assets/data/data2.json';
 import * as data3 from '../../assets/data/data3.json';
@@ -65,13 +66,26 @@ export class BarGraphComponent implements OnChanges {
     }
 
     this.chart2 = new Chart("lineChart2", {
+      //add in time scale
       type: 'line',
       data: {
-        labels: ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM'],
+        labels: ['0', '3', '5', '7', '10', '15'],
         datasets: [{
-          label: 'Data for Specified Day',
+          label: 'Data for Specified Segment',
           data: Data,
         }],
+      },
+      options: {
+        scales: {
+          x: {
+            ticks: {
+              maxTicksLimit: 1,
+              major: {
+                enabled: true
+              }
+            },
+          }
+        }
       }
     });
   }

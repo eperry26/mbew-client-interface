@@ -5,7 +5,7 @@ h1 {
 div.container {
     position: relative;
     outline: auto;
-    outline-style: solid;
+    outline-style:none;
     font-size: larger;
     padding-bottom: 3%;
 }
@@ -14,14 +14,14 @@ div.container {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 40%;
 }
 
 .graph2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 45%;
 }
 
 .profile{
@@ -38,4 +38,28 @@ div.container {
     z-index: 300;
     left:0;
     top:0;
+}
+
+.legendBox{
+    position: absolute;
+    top: 5%;
+    right: 10%
+}
+
+button{
+    padding: 20px;
+    display: block;
+    width: 25%;
+}
+
+.modButton{
+    background-color: rgba(54, 162, 235, 0.3);
+}
+
+.mildButton{
+    background-color: rgba(255, 206, 86, 0.3);
+}
+
+.sevButton{
+    background-color: rgba(255, 26, 104, 0.3);
 }

@@ -1,10 +1,11 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {Chart} from 'chart.js'
+import {Chart, plugins} from 'chart.js'
+import 'chartjs-adapter-date-fns';
 import * as data1 from '../../assets/data/data1.json';
 import * as data2 from '../../assets/data/data2.json';
 import * as data3 from '../../assets/data/data3.json';
 import * as data4 from '../../assets/data/data4.json';
-import { max } from 'd3';
+import { max, timeHour } from 'd3';
 //import { TremordataService, DataPoints } from '../tremordata.service';
 
 
@@ -152,31 +153,60 @@ export class TremorGraphComponent implements OnInit {
     this.y_points3 = this.getYpoints(Data3);
     this.y_points4 = this.getYpoints(Data4);
 
+    // develop a function?
     const range1 = [Math.min(...this.y_points1), Math.max(...this.y_points1)]
     const range2 = [Math.min(...this.y_points2), Math.max(...this.y_points2)]
     const range3 = [Math.min(...this.y_points3), Math.max(...this.y_points3)]
     const range4 = [Math.min(...this.y_points4), Math.max(...this.y_points4)]
 
 
-    for (let i = 0; i < 4 ; i++) {
-      this.test_labels.push("Day "+(i+1))
+    for (let i = 1; i < 5 ; i++) {
+      const x=i*15
+      this.test_labels.push("Minute "+ x)
     }
 
     //will need to make for loops for border color and background color
-
-    // console.log(Math.min(...this.y_points))
-    // console.log(Math.max(...this.y_points))
+   const barColors = []
 
 
     this.chart = new Chart("myChart", {
       type: 'bar', //this denotes tha type of chart
 
       data: {// values on X-Axis
-        labels: this.test_labels,
+        //labels: [new Date('2023-04-06T9:00:00'), new Date('2023-04-06T10:00:00'), new Date('2023-04-06T11:00:00'), new Date('2023-04-06T12:00:00')],
 	       datasets: [
           {
             label: "Tremor Reading",
-            data: [range1, range2, range3, range4],
+            //data: [range1, range2, range3, range4],
+            data: [
+              {x: '2023-04-06T09:00:00', y: range1},
+              {x: '2023-04-06T09:15:00', y: range2},
+              {x: '2023-04-06T09:30:00', y: range3},
+              {x: '2023-04-06T09:45:00', y: range4},
+              {x: '2023-04-06T10:00:00', y: [90,120]},
+              {x: '2023-04-06T10:15:00', y: [50,77]},
+
+              {x: '2023-04-06T10:30:00', y: range1},
+              {x: '2023-04-06T10:45:00', y: range2},
+              {x: '2023-04-06T11:00:00', y: range3},
+              {x: '2023-04-06T11:15:00', y: range4},
+              {x: '2023-04-06T11:30:00', y: [90,120]},
+              {x: '2023-04-06T11:45:00', y: [50,77]},
+
+              {x: '2023-04-06T12:00:00', y: range1},
+              {x: '2023-04-06T12:15:00', y: range2},
+              {x: '2023-04-06T12:30:00', y: range3},
+              {x: '2023-04-06T12:45:00', y: range4},
+              {x: '2023-04-06T13:00:00', y: [90,120]},
+              {x: '2023-04-06T13:15:00', y: [50,77]},
+
+              {x: '2023-04-06T13:30:00', y: range1},
+              {x: '2023-04-06T13:45:00', y: range2},
+              {x: '2023-04-06T14:00:00', y: range3},
+              {x: '2023-04-06T14:15:00', y: range4},
+              {x: '2023-04-06T14:30:00', y: [90,120]},
+              {x: '2023-04-06T14:45:00', y: [50,77]},
+            ],
               backgroundColor: [
                 'rgba(54, 162, 235, 0.2)', //red rgba(255, 26, 104, 0.2)
                 'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
@@ -184,7 +214,29 @@ export class TremorGraphComponent implements OnInit {
                 'rgba(255, 26, 104, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(54, 162, 235, 0.2)'
+
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)', //red rgba(255, 26, 104, 0.2)
+                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
+                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
+                'rgba(255, 26, 104, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
+                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
+                'rgba(255, 26, 104, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
+                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
+                'rgba(255, 26, 104, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+
+
               ],
               borderColor: [
                 'rgba(54, 162, 235, 1)',
@@ -193,7 +245,27 @@ export class TremorGraphComponent implements OnInit {
                 'rgba(255, 26, 104, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)'
+
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 26, 104, 1)',
+                'rgba(54, 162, 235, 1)',
+
+                'rgba(255, 206, 86, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 26, 104, 1)',
+                'rgba(54, 162, 235, 1)',
+
+                'rgba(255, 206, 86, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 26, 104, 1)',
+                'rgba(54, 162, 235, 1)',
               ],
               borderWidth: 1,
               borderSkipped: false
@@ -202,6 +274,29 @@ export class TremorGraphComponent implements OnInit {
       },
       options: {
         aspectRatio:2.5,
+        scales: {
+          x: {
+            type: 'timeseries',
+            ticks: {
+              stepSize: 15,
+              maxTicksLimit: 6,
+              major: {
+                enabled: true
+              }
+            },
+            time: {
+              unit: 'minute',
+            }
+          },
+          y: {
+            suggestedMin: 0
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+        }
       }
 
     });

@@ -9,14 +9,12 @@ import {AngularFireModule} from '@angular/fire/compat'
 import {HttpClientModule} from '@angular/common/http';
 import 'hammerjs';
 import 'chartjs-plugin-zoom';
+import 'chartjs-adapter-date-fns';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TremorGraphComponent } from './tremor-graph/tremor-graph.component';
-import { MenuComponent } from './menu/menu.component';
-import { PhysicianProfileComponent } from './physician-profile/physician-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { environment } from 'src/environments/environment';
 import { TremordataService } from './tremordata.service';
 import { BarGraphComponent } from './bar-graph/bar-graph.component';
 
@@ -24,8 +22,6 @@ import { BarGraphComponent } from './bar-graph/bar-graph.component';
   declarations: [
     AppComponent,
     TremorGraphComponent,
-    MenuComponent,
-    PhysicianProfileComponent,
     BarGraphComponent
   ],
   imports: [
@@ -38,7 +34,6 @@ import { BarGraphComponent } from './bar-graph/bar-graph.component';
     MatSelectModule,
     MatMenuModule,
     MatIconModule,
-    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [TremordataService],
   bootstrap: [AppComponent]

@@ -25,6 +25,10 @@
       "dom"
     ]
   },
+  "typeRoots": [
+    "./typings",
+    "./node_modules/@types/"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
