@@ -1,15 +1,16 @@
-<h1>Tremor Readings from Patient X</h1>
+
 <div class="container">
         <app-tremor-graph class="graph" (childEvent)="position=$event"></app-tremor-graph>
 
-        <div class="legendBox"><h2>Tremor Severity Legend</h2>
-                Moderate
-                <button class="modButton"></button>
+        <div class="legendBox">
                 Mild
+                <button class="modButton"></button>
+                Moderate
                 <button class="mildButton"></button>
                 Severe
                 <button class="sevButton"></button>
         </div>
-        <app-bar-graph class="graph2" [lineData]="position"></app-bar-graph>
+        <app-line-graph class="graph2">
+        </app-line-graph>
 
 </div>

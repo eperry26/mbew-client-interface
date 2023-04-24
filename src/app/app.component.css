@@ -14,14 +14,14 @@ div.container {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 60%;
 }
 
 .graph2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
+    width: 55%;
 }
 
 .profile{
@@ -42,24 +42,33 @@ div.container {
 
 .legendBox{
     position: absolute;
-    top: 5%;
-    right: 10%
+    top: 7.5%;
+    right: 19.5%;
+    outline: 1px;
+    outline-style: solid;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 4px;
 }
 
 button{
-    padding: 20px;
+    padding: 7px;
     display: block;
-    width: 25%;
+    width: 10px;
 }
 
 .modButton{
-    background-color: rgba(54, 162, 235, 0.3);
+    background-color: rgba(54, 162, 235, 0.5);
 }
 
 .mildButton{
-    background-color: rgba(255, 206, 86, 0.3);
+    background-color: rgba(255, 206, 86, 0.5);
 }
 
 .sevButton{
-    background-color: rgba(255, 26, 104, 0.3);
+    background-color: rgba(255, 26, 104, 0.5);
 }

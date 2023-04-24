@@ -1,0 +1,1162 @@
+[
+ {
+   "tremorScore": 0,
+   "time": 2.446933333
+ },
+ {
+   "tremorScore": 0,
+   "time": 4.926933333
+ },
+ {
+   "tremorScore": 0,
+   "time": 7.406933333
+ },
+ {
+   "tremorScore": 0,
+   "time": 9.886933333
+ },
+ {
+   "tremorScore": 0,
+   "time": 12.36693333
+ },
+ {
+   "tremorScore": 1.753712108,
+   "time": 14.84693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 17.32693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 19.80693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 22.28693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 24.76693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 27.24693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 29.72693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 32.20693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 34.68693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 37.16693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 39.64693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 42.12693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 44.60693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 47.08693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 49.56693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 52.04693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 54.52693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 57.00693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 59.48693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 61.96693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 64.44693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 66.92693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 69.40693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 71.88693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 74.36693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 76.84693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 79.32693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 81.80693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 84.28693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 86.76693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 89.24693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 91.72693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 94.20693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 96.68693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 99.16693333
+ },
+ {
+   "tremorScore": 0,
+   "time": 101.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 104.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 106.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 109.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 111.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 114.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 116.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 119.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 121.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 123.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 126.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 128.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 131.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 133.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 136.3669333
+ },
+ {
+   "tremorScore": 0.319072712,
+   "time": 138.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 141.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 143.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 146.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 148.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 151.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 153.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 156.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 158.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 161.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 163.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 166.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 168.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 171.0869333
+ },
+ {
+   "tremorScore": 1.001617868,
+   "time": 173.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 176.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 178.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 181.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 183.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 185.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 188.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 190.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 193.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 195.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 198.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 200.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 203.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 205.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 208.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 210.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 213.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 215.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 218.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 220.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 223.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 225.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 228.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 230.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 233.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 235.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 238.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 240.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 243.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 245.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 247.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 250.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 252.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 255.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 257.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 260.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 262.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 265.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 267.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 270.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 272.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 275.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 277.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 280.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 282.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 285.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 287.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 290.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 292.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 295.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 297.5669333
+ },
+ {
+   "tremorScore": 2.433970096,
+   "time": 300.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 302.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 305.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 307.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 309.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 312.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 314.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 317.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 319.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 322.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 324.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 327.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 329.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 332.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 334.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 337.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 339.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 342.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 344.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 347.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 349.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 352.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 354.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 357.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 359.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 362.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 364.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 367.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 369.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 371.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 374.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 376.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 379.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 381.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 384.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 386.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 389.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 391.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 394.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 396.7669333
+ },
+ {
+   "tremorScore": 1.543996182,
+   "time": 399.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 401.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 404.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 406.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 409.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 411.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 414.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 416.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 419.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 421.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 424.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 426.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 429.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 431.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 433.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 436.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 438.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 441.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 443.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 446.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 448.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 451.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 453.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 456.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 458.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 461.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 463.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 466.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 468.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 471.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 473.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 476.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 478.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 481.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 483.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 486.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 488.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 491.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 493.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 495.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 498.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 500.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 503.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 505.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 508.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 510.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 513.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 515.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 518.2869333
+ },
+ {
+   "tremorScore": 1.558552545,
+   "time": 520.7669333
+ },
+ {
+   "tremorScore": 1.494921396,
+   "time": 523.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 525.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 528.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 530.6869333
+ },
+ {
+   "tremorScore": 1.636008802,
+   "time": 533.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 535.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 538.1269333
+ },
+ {
+   "tremorScore": 2.299288768,
+   "time": 540.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 543.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 545.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 548.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 550.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 553.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 555.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 557.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 560.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 562.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 565.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 567.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 570.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 572.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 575.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 577.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 580.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 582.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 585.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 587.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 590.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 592.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 595.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 597.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 600.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 602.6069333
+ },
+ {
+   "tremorScore": 2.669441897,
+   "time": 605.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 607.5669333
+ },
+ {
+   "tremorScore": 2.092350645,
+   "time": 610.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 612.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 615.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 617.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 619.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 622.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 624.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 627.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 629.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 632.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 634.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 637.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 639.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 642.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 644.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 647.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 649.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 652.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 654.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 657.1669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 659.6469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 662.1269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 664.6069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 667.0869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 669.5669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 672.0469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 674.5269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 677.0069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 679.4869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 681.9669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 684.4469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 686.9269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 689.4069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 691.8869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 694.3669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 696.8469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 699.3269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 701.8069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 704.2869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 706.7669333
+ },
+ {
+   "tremorScore": 0,
+   "time": 709.2469333
+ },
+ {
+   "tremorScore": 0,
+   "time": 711.7269333
+ },
+ {
+   "tremorScore": 0,
+   "time": 714.2069333
+ },
+ {
+   "tremorScore": 0,
+   "time": 716.6869333
+ },
+ {
+   "tremorScore": 0,
+   "time": 719.1669333
+ }
+]

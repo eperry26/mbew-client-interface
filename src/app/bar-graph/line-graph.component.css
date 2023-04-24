@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+button {
+    position: absolute;
+    right: 10%;
+    top: 61.5%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: medium;
+}

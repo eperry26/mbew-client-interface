@@ -1,19 +1,17 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {Chart, plugins} from 'chart.js'
+import { Chart, plugins } from 'chart.js'
 import 'chartjs-adapter-date-fns';
-import * as data1 from '../../assets/data/data1.json';
-import * as data2 from '../../assets/data/data2.json';
-import * as data3 from '../../assets/data/data3.json';
-import * as data4 from '../../assets/data/data4.json';
-import { max, timeHour } from 'd3';
-//import { TremordataService, DataPoints } from '../tremordata.service';
+import * as tremorDataControl from '../../assets/data/newTremorData_control.json';
+import * as tremorData6 from '../../assets/data/newTremorData_PD6.json';
+import * as tremorData12 from '../../assets/data/newTremorData12.json';
+import * as tremorData17 from '../../assets/data/newTremorData_PD17.json';
+import * as tremorData23 from '../../assets/data/newTremorData_PD23.json';
 
 
 @Component({
   selector: 'app-tremor-graph',
   templateUrl: './tremor-graph.component.html',
   styleUrls: ['./tremor-graph.component.css'],
-  //providers: [TremordataService]
 })
 
 
@@ -23,40 +21,59 @@ export class TremorGraphComponent implements OnInit {
   constructor() {
   }
 
-  dataIndex?: number;
+  timePoint: any // time stamp for whatever bar was clicked
+  maxScore: any // max score of the time segment (bar)
 
-  dataPoints: any = JSON.parse(JSON.stringify(data1));
-  dataPoints2: any=JSON.parse(JSON.stringify(data2));
-  dataPoints3: any=JSON.parse(JSON.stringify(data3));
-  dataPoints4: any=JSON.parse(JSON.stringify(data4));
+  y_points: any = []
 
-  y_points1: any = []
-  y_points2: any = []
-  y_points3: any = []
-  y_points4: any = []
+  tremorDataControl: any = JSON.parse(JSON.stringify(tremorDataControl));
+  tremorData6: any = JSON.parse(JSON.stringify(tremorData6));
+  tremorData12: any = JSON.parse(JSON.stringify(tremorData12));
+  tremorData17: any = JSON.parse(JSON.stringify(tremorData17));
+  tremorData23: any = JSON.parse(JSON.stringify(tremorData23));
 
   test_labels: any = [];
 
-  // graphChoice!: string;
-  graphChoices = ['Line','Bar'];
-  // labs: Array<string> = [];
-  y = 100;
+  graphChoice!: string;
+  graphChoices = ['Control', '6', '12', '17', '23'];
+  patientID!: string; //purpose: have the chart title be specific to the patient chosen
 
-  getData() {
-   this.createBarChart(this.dataPoints, this.dataPoints2, this.dataPoints3, this.dataPoints4);
+  getData(tData: any) {
+    this.createBarChart(tData)
   }
 
   ngOnInit(): void {
-    //this.graphChoice = "Line"
-    this.getData()
-    //this.createBarChart(this.data1)
-
-
+    this.patientID = "PD Patient 6"
+    this.getData(this.tremorData6)
   }
 
   onChange(event: any) {
-    console.log(event.value)
-    //return this.graphChoice = event.value;
+    //console.log(event.value)
+    if (event.value == 'Control') {
+      this.patientID = "Control Patient"
+      this.getData(this.tremorDataControl)
+      console.log('Control patient was chosen')
+    }
+    else if (event.value == '6') {
+      this.patientID = "PD Patient 6"
+      this.getData(this.tremorData6)
+      console.log('Patient 6 was chosen')
+    }
+    else if (event.value == '12') {
+      this.patientID = "PD Patient 12"
+      this.getData(this.tremorData12)
+      console.log('Patient 12 was chosen')
+    }
+    else if (event.value == '17') {
+      this.patientID = "PD Patient 17"
+      this.getData(this.tremorData17)
+      console.log('Patient 17 was chosen')
+    }
+    else if (event.value == '23') {
+      this.patientID = "PD Patient 23"
+      this.getData(this.tremorData23)
+      console.log('Patient 23 was chosen')
+    }
   }
 
 
@@ -66,230 +83,151 @@ export class TremorGraphComponent implements OnInit {
 
   public chart: any;
 
-  // createChart(Data: any) {
-  //   console.log(Data)
-  //   for (let i = 0; i < Data.length ; i++) {
-  //     this.test_labels.push(Data[i].x);
-  //     //this.y_points.push(this.y + Math.round(Math.random() * 10 - 5));
-  //     this.y_points.push(Data[i].y)
-  //   }
-  //   console.log(Math.max(...this.y_points))
 
-  //   // if (graphChoice == "Line") {
-  //   this.chart = new Chart("myChart", {
-  //     type: 'line', //this denotes tha type of chart
-
-  //     data: {
-  //       labels: this.test_labels,
-  //       //labels: ['9AM', '10AM', '11AM', '12PM'],
-  //       datasets: [
-  //         {
-  //           label: "Tremor Reading",
-  //           data: this.y_points,
-  //           backgroundColor: 'black',
-  //           pointBackgroundColor: 'blue'
-  //         }
-  //       ]
-  //     },
-  //     options: {
-  //       aspectRatio: 2.7,
-  //       borderColor: 'black',
-  //       plugins: {
-  //         zoom: {
-  //           pan: {
-  //             enabled: true,
-  //             mode: 'xy'
-  //           },
-  //           zoom: {
-  //             mode: 'y'
-  //           }
-  //         }
-  //       },
-  //       elements: {
-  //         point: {
-  //           radius: 0
-  //         },
-  //         line: {
-  //           tension: 0.05
-  //         }
-  //       },
-  //       //spanGaps: false,
-  //       scales: {
-  //         x: {
-  //           ticks: {
-  //             maxTicksLimit: 5,
-  //             // display: false,
-  //           }
-  //         },
-  //         // y: {
-  //         //   max: 120
-  //         // }
-  //       }
-  //     },
-
-  //   });
-
-
-  // }
-
-
-  //Bar chart
-  // data1 = [
-  //   [10,30], [15,26], [8,35], [24,50],
-  //   [4,10], [16,31], [11,20], [13,27]
-  //   ];
-
-  createBarChart(Data: any, Data2: any, Data3: any, Data4: any){
-
-    Data = Data.datapoints1
-    Data2 = Data2.datapoints2
-    Data3 = Data3.datapoints3
-    Data4 = Data4.datapoints4
-    // console.log("Day "+(1+1))
-
-
-    this.y_points1 = this.getYpoints(Data);
-    this.y_points2 = this.getYpoints(Data2);
-    this.y_points3 = this.getYpoints(Data3);
-    this.y_points4 = this.getYpoints(Data4);
-
-    // develop a function?
-    const range1 = [Math.min(...this.y_points1), Math.max(...this.y_points1)]
-    const range2 = [Math.min(...this.y_points2), Math.max(...this.y_points2)]
-    const range3 = [Math.min(...this.y_points3), Math.max(...this.y_points3)]
-    const range4 = [Math.min(...this.y_points4), Math.max(...this.y_points4)]
-
-
-    for (let i = 1; i < 5 ; i++) {
-      const x=i*15
-      this.test_labels.push("Minute "+ x)
+  createBarChart(Data: any) {
+    if (this.chart != null) {
+      this.chart.destroy(); // have to destroy the previous chart before the new one can be created
     }
 
-    //will need to make for loops for border color and background color
-   const barColors = []
+    this.y_points = this.getYpoints(Data);
+
+
+
+    //will need to make for loop for border color and background color
+    const barColors = []
+    let splitData = []
+    let x = 0
+    let z = '24.458756'
+    z = z.split('.')[0]
+    console.log(z.length)
+    console.log(Date.now())
+
+
+    for (let i = 0; i < this.y_points.length; i += 5) {
+      const chunk = [ // grabbing ~12 minutes worth of data
+        this.y_points[i],
+        this.y_points[i + 1],
+        this.y_points[i + 2],
+        this.y_points[i + 3],
+        this.y_points[i + 4]
+      ]
+      splitData[x] = [Math.min(...chunk), Math.max(...chunk)]
+      x++
+
+    }
+
+
+
+
+    // for loop for assigning color to each bar (time chunk)
+    for (let i = 0; i < splitData.length; i++) {
+      const maxVal = splitData[i][1]
+      if (maxVal < 3) { //Mild // blue rgba(54, 162, 235, 0.2)
+        barColors[i] = 'rgba(54, 162, 235, 0.5)'
+      }
+      else if (maxVal > 3 && maxVal <= 5) { // yellow rgba(255, 206, 86, 0.2)
+        barColors[i] = 'rgba(255, 206, 86, 0.5)'
+      }
+      else if (maxVal > 5) { //red rgba(255, 26, 104, 0.2)
+        barColors[i] = 'rgba(255, 26, 104, 0.5)'
+      }
+    }
+
+    // for loop for creating labels
+    let j = 0
+    let label = 0
+    let curT: any = 0
+    for (let i = 0; i < Data.length; i += 5) {
+      curT = Math.round(Data[i].time)
+      label = curT.toString();
+      this.test_labels[j] = label
+      j++
+    }
+    console.log(this.test_labels)
 
 
     this.chart = new Chart("myChart", {
-      type: 'bar', //this denotes tha type of chart
+      type: 'bar', //this denotes the type of chart
 
       data: {// values on X-Axis
-        //labels: [new Date('2023-04-06T9:00:00'), new Date('2023-04-06T10:00:00'), new Date('2023-04-06T11:00:00'), new Date('2023-04-06T12:00:00')],
-	       datasets: [
+        // will need to automate labels. Instead of plotting the actual time of day, could display the timestamps on x-axis
+        // let base = '2023-04-28T'
+        // let milliS = ':00'
+        // for (i=0; i < splitData.length; i++) {
+        // this.test_labels[i] =
+        // this.test_labels[i] = tremorData[i].time
+        // }
+
+        //   labels: ['2023-04-16T09:00:00', '2023-04-16T09:12:00', '2023-04-16T09:24:00', '2023-04-16T09:36:00',
+        //   '2023-04-16T09:48:00', '2023-04-16T10:00:00', '2023-04-16T10:12:00', '2023-04-16T10:24:00',
+        //   '2023-04-16T10:36:00', '2023-04-16T10:48:00', '2023-04-16T11:00:00', '2023-04-16T11:12:00',
+        //   '2023-04-16T11:24:00', '2023-04-16T11:36:00', '2023-04-16T11:48:00', '2023-04-16T12:00:00',
+        //   '2023-04-16T12:12:00', '2023-04-16T12:24:00', '2023-04-16T12:36:00', '2023-04-16T12:48:00',
+        //   '2023-04-16T13:00:00', '2023-04-16T13:12:00', '2023-04-16T13:24:00', '2023-04-16T13:36:00',
+        //   '2023-04-16T13:48:00', '2023-04-16T14:00:00', '2023-04-16T14:12:00', '2023-04-16T14:24:00',
+        //   '2023-04-16T14:36:00', '2023-04-16T14:48:00', '2023-04-16T15:00:00', '2023-04-16T15:12:00',
+        //   '2023-04-16T15:24:00', '2023-04-16T15:36:00', '2023-04-16T15:48:00', '2023-04-16T16:00:00',
+        //   '2023-04-16T16:12:00', '2023-04-16T16:24:00', '2023-04-16T16:36:00', '2023-04-16T16:48:00',
+        //   '2023-04-16T17:00:00', '2023-04-16T17:12:00', '2023-04-16T17:24:00', '2023-04-16T17:36:00',
+        //   '2023-04-16T17:48:00', '2023-04-16T18:00:00', '2023-04-16T18:12:00', '2023-04-16T18:24:00',
+        //   '2023-04-16T18:36:00', '2023-04-16T18:48:00', '2023-04-16T19:00:00', '2023-04-16T19:12:00',
+        //   '2023-04-16T19:24:00', '2023-04-16T19:36:00', '2023-04-16T19:48:00', '2023-04-16T20:12:00',
+        //   '2023-04-16T20:24:00', '2023-04-16T20:36:00', '2023-04-16T20:48:00', '2023-04-16T21:00:00',
+        // ],
+        labels: this.test_labels,
+        datasets: [
           {
             label: "Tremor Reading",
-            //data: [range1, range2, range3, range4],
-            data: [
-              {x: '2023-04-06T09:00:00', y: range1},
-              {x: '2023-04-06T09:15:00', y: range2},
-              {x: '2023-04-06T09:30:00', y: range3},
-              {x: '2023-04-06T09:45:00', y: range4},
-              {x: '2023-04-06T10:00:00', y: [90,120]},
-              {x: '2023-04-06T10:15:00', y: [50,77]},
-
-              {x: '2023-04-06T10:30:00', y: range1},
-              {x: '2023-04-06T10:45:00', y: range2},
-              {x: '2023-04-06T11:00:00', y: range3},
-              {x: '2023-04-06T11:15:00', y: range4},
-              {x: '2023-04-06T11:30:00', y: [90,120]},
-              {x: '2023-04-06T11:45:00', y: [50,77]},
-
-              {x: '2023-04-06T12:00:00', y: range1},
-              {x: '2023-04-06T12:15:00', y: range2},
-              {x: '2023-04-06T12:30:00', y: range3},
-              {x: '2023-04-06T12:45:00', y: range4},
-              {x: '2023-04-06T13:00:00', y: [90,120]},
-              {x: '2023-04-06T13:15:00', y: [50,77]},
-
-              {x: '2023-04-06T13:30:00', y: range1},
-              {x: '2023-04-06T13:45:00', y: range2},
-              {x: '2023-04-06T14:00:00', y: range3},
-              {x: '2023-04-06T14:15:00', y: range4},
-              {x: '2023-04-06T14:30:00', y: [90,120]},
-              {x: '2023-04-06T14:45:00', y: [50,77]},
-            ],
-              backgroundColor: [
-                'rgba(54, 162, 235, 0.2)', //red rgba(255, 26, 104, 0.2)
-                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
-                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
-                'rgba(255, 26, 104, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(54, 162, 235, 0.2)', //red rgba(255, 26, 104, 0.2)
-                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
-                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
-                'rgba(255, 26, 104, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
-                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
-                'rgba(255, 26, 104, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(54, 162, 235, 0.2)', // blue rgba(54, 162, 235, 0.2)
-                'rgba(255, 206, 86, 0.2)', // yellow rgba(255, 206, 86, 0.2)
-                'rgba(255, 26, 104, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-
-
-              ],
-              borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 26, 104, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 26, 104, 1)',
-                'rgba(54, 162, 235, 1)',
-
-                'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 26, 104, 1)',
-                'rgba(54, 162, 235, 1)',
-
-                'rgba(255, 206, 86, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 26, 104, 1)',
-                'rgba(54, 162, 235, 1)',
-              ],
-              borderWidth: 1,
-              borderSkipped: false
+            data: splitData,
+            backgroundColor: barColors,
+            borderColor: barColors,
+            borderWidth: 1,
+            borderSkipped: false
           },
         ]
       },
       options: {
-        aspectRatio:2.5,
+        aspectRatio: 2.5,
         scales: {
           x: {
-            type: 'timeseries',
-            ticks: {
-              stepSize: 15,
-              maxTicksLimit: 6,
-              major: {
-                enabled: true
-              }
+            max: this.test_labels[-1],
+            title: {
+              display: true,
+              text: 'Time (minutes)',
+              font: {
+                size: 20,
+                weight: 'bold'
+              },
             },
-            time: {
-              unit: 'minute',
-            }
+            //type: 'timeseries',
+            ticks: {
+              font: {
+                size: 17,
+                weight: 'bold'
+              },
+              maxTicksLimit: 4
+            },
+            // time: {
+            //   unit: 'hour',
+            // }
           },
           y: {
-            suggestedMin: 0
+            max: 6,
+            suggestedMin: 0,
+            title: {
+              display: true,
+              text: 'Tremor Score',
+              font: {
+                size: 20,
+                weight: 'bold',
+              },
+            },
+            ticks: {
+              font: {
+                size: 17,
+                weight: 'bold'
+              }
+            },
           }
         },
         plugins: {
@@ -306,18 +244,21 @@ export class TremorGraphComponent implements OnInit {
   private getYpoints(Data: any) {
     const y_pts = []
     for (let i = 0; i < Data.length; i++) {
-      y_pts.push(Data[i].y);
+      y_pts.push(Data[i].tremorScore);
     }
     return y_pts
   }
 
   clickHandler(click: any) {
     //const ctx = document.getElementById("myChart")
-    const points = this.chart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, false);
-    //if(points.length) {
-      //console.log(points[0].index + 1) // getting index for that bar's dataset
-      this.childEvent.emit(points[0].index)
-    //}
+    const points = this.chart.getElementsAtEventForMode(click, 'nearest', { intersect: true }, false);
+    const clickedBar = points[0]
+    this.maxScore = clickedBar.element.$context.raw[1]
+    this.maxScore = Number(this.maxScore.toFixed(2))
+    const barIndex = clickedBar.index // tells us what bar the user clicked on
+    this.timePoint = this.test_labels[barIndex] + ' min'
+    return this.maxScore, this.timePoint
+    //this.childEvent.emit(points[0].index)
   }
 }
 

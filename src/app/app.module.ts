@@ -16,13 +16,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { TremorGraphComponent } from './tremor-graph/tremor-graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TremordataService } from './tremordata.service';
-import { BarGraphComponent } from './bar-graph/bar-graph.component';
+import { LineGraphComponent } from './bar-graph/line-graph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TremorGraphComponent,
-    BarGraphComponent
+    LineGraphComponent
   ],
   imports: [
     BrowserModule,
